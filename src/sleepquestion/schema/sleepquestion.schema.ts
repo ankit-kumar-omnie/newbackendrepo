@@ -27,6 +27,12 @@ export class forms {
       subQuestion: LabelValues[];
     }
   ];
+
+  @Prop({ type: Object })
+  uiSchema: any;
+
+  @Prop({ type: Object })
+  dataSchema: any;
 }
 
 export const SleepQuestionSchema = SchemaFactory.createForClass(forms);

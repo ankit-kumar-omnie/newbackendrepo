@@ -41,9 +41,11 @@ export class SleepQuestionController {
     return await this.sleepService.getbyid(id);
   }
 
-  @HttpCode(201)
-  @Post()
-  async createform(@Body() dto: any) {
-    return await this.sleepService.createform(dto);
-  }
+  // ...
+
+@Put("/update/:id")
+async addfield(@Param("id") id: string, @Body() dto: any) {
+  return await this.sleepService.addfield(id, dto);
+}
+
 }
